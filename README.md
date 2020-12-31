@@ -3,7 +3,7 @@ Check your hidden ELO in Valorant with a desktop application! This repo is the s
 Want to install an .exe file instead? I got you covered: https://github.com/clikbait295/Valorant-ELO-Checker-Installer
 # Installation
 1. Make sure you have Python 3 and pip installed on your computer. Download it [here](https://www.python.org/downloads/) for Windows. It should be pre-installed on Macs.
-2. Clone the repo (download as a zip, use git clone, etc)
+2. Clone the repo (download as a zip, use git clone, etc) If you downloaded as a zip, unzip the file.
 3. Use pip to install the "requests" package. (Depending on your system, it'll look something like "py -m pip install requests" or "python3 -m pip install requests"...you might need to do a little troubleshooting here.)
 4. After it's finished installing, you can simply double click the "main.py" file. 
 5. Enter in your username and password, and check out your rank and internal ELO rating! See the manual below for more info.
