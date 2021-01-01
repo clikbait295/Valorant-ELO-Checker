@@ -173,7 +173,7 @@ def overlayMode(username, password):
         matchHistory.title('Match History for ' + username)
         matchHistory.iconbitmap('favicon.ico')
         matchHistory.attributes("-topmost", True)
-        matchHistory.geometry('+0-0')  
+        matchHistory.geometry('-0-0')  
         matchHistory.overrideredirect(1)
         MyLabel(matchHistory,(posts[0]["game_map"]+", "+posts[0]["date"]), str(posts[0]["current_lp"]), posts[0]["tier"], posts[0]["lp_change"], posts[0]["movement"]).pack(expand=True, fill='x')
         refresh = lambda _:[matchHistory.destroy(),overlayMode(username,password)]
