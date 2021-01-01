@@ -32,10 +32,10 @@ maps_hash = {
 }
 
 
-def normalMode(usernameText, passwordText):
+def normalMode(usernameText, passwordText, regionText):
         username=usernameText.get()
         password=passwordText.get()
-        region = "NA"
+        region = regionText.get()
         client_ip = socket.gethostbyname(hostname)
 
         # Attempt login
@@ -103,12 +103,11 @@ def normalMode(usernameText, passwordText):
         matchHistory.title('Match History for ' + username)
         for i, n in enumerate(posts):
                 MyLabel(matchHistory,(posts[i]["game_map"]+", "+posts[i]["date"]), str(posts[i]["current_lp"]), posts[i]["tier"], posts[i]["lp_change"], posts[i]["movement"]).pack(expand=True, fill='x')
-        Button(matchHistory, text="Switch to Overlay Mode", command=lambda:[matchHistory.destroy(), overlayMode(username, password)]).pack()
+        Button(matchHistory, text="Switch to Overlay Mode", command=lambda:[matchHistory.destroy(), overlayMode(username, password, region)]).pack()
         Button(matchHistory, text="Refresh", command=lambda:[matchHistory.destroy(), normalMode()]).pack()
         return
 
-def overlayMode(username, password):
-        region = "NA"
+def overlayMode(username, password, region):
         client_ip = socket.gethostbyname(hostname)
 
         # Attempt login
@@ -176,7 +175,7 @@ def overlayMode(username, password):
         matchHistory.geometry('-0-0')  
         matchHistory.overrideredirect(1)
         MyLabel(matchHistory,(posts[0]["game_map"]+", "+posts[0]["date"]), str(posts[0]["current_lp"]), posts[0]["tier"], posts[0]["lp_change"], posts[0]["movement"]).pack(expand=True, fill='x')
-        refresh = lambda _:[matchHistory.destroy(),overlayMode(username,password)]
+        refresh = lambda _:[matchHistory.destroy(),overlayMode(username,password,region)]
         normal = lambda _:[matchHistory.destroy(),normalMode()]
         quit = lambda _:[tkWindow.destroy(),sys.exit()]
         matchHistory.bind("<Alt_L><r>", refresh)
@@ -202,7 +201,7 @@ class MyLabel(Frame):
 
 #window
 tkWindow = Tk()  
-tkWindow.geometry('230x160')  
+tkWindow.geometry('230x190')  
 tkWindow.title('Login to Riot')
 
 #username label and text entry box
@@ -214,11 +213,13 @@ usernameEntry = Entry(tkWindow, textvariable=usernameText).grid(row=0, column=1)
 passwordLabel = Label(tkWindow,text="Password").grid(row=1, column=0, pady=13)  
 passwordText = StringVar()
 passwordEntry = Entry(tkWindow, textvariable=passwordText, show='•').grid(row=1, column=1,pady=13)
-normalMode= partial(normalMode, usernameText, passwordText)
+
+regionLabel = Label(tkWindow,text="Region").grid(row=2, column=0, pady=0)  
+regionText = StringVar()
+regionEntry = Entry(tkWindow, textvariable=regionText).grid(row=2, column=1,pady=00)
+normalMode= partial(normalMode, usernameText, passwordText, regionText)
 #login button
-loginButton = Button(tkWindow, text="Login", command=normalMode, height=3).place(x=185,y=0)  
-notice = Label(tkWindow,text="This application is not affiliated with Riot Games, or any of its games. This application simply uses Riot's API to find your ELO. No personal info is gathered or saved by this application.\n~ Created by Arnav Ambre ~", wraplength=230, justify="left").place(x=0,y=60)  
+loginButton = Button(tkWindow, text="Login", command=normalMode, height=5).place(x=185,y=0)  
+notice = Label(tkWindow,text="This application is not affiliated with Riot Games, or any of its games. This application simply uses Riot's API to find your ELO. No personal info is gathered or saved by this application.\n~ Created by Arnav Ambre ~", wraplength=230, justify="left").place(x=0,y=90)  
 tkWindow.iconbitmap('favicon.ico')
 tkWindow.mainloop()
-
-
