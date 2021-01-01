@@ -71,7 +71,7 @@ class ValorantAPI(object):
       'Authorization': f'Bearer {self.access_token}',
       'X-Forwarded-For': self.client_ip
     }
-
+#
     r = requests.post('https://auth.riotgames.com/userinfo', headers=headers, json={}, cookies=self.cookies)
     jsonData = r.json()
     user_info = jsonData['sub']
