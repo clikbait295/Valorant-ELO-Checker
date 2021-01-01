@@ -16,10 +16,10 @@ To switch to overlay mode, click on "Switch to Overlay Mode." In this mode, your
 Note: To use this overlay while playing Valorant, you have to switch your graphics settings to "Windowed Fullscreen." To use the keyboard shortcuts while in game, hit your escape key (so you can see your mouse) and click on the overlay mode. Then, use the keyboard shortcuts to refresh, quit, or switch to overlay mode.
 
 To change your region, type in the following in the "Region" textbox for whichever region you are in:
-North America: NA <-- type in the abbreviation
-Europe: EU
-Korea: KO
-Asia Pacific: AP
+- North America: NA <-- type in the abbreviation
+- Europe: EU
+- Korea: KO
+- Asia Pacific: AP
 # Inspiration
 I always wanted a way to check my Valorant ranked ELO, and when I saw dylantheriot's and RumbleMikee's code, I felt I could add a little pizzaz to the process. So I created a spiffing (not really) tkinter program so the program could be used without a browser and an overlay mode for easy viewing in-game. Check out the following repos by dylantheriot, RubmleMikee, and Luc1412 from which I got my inspiration:
 - https://github.com/dylantheriot/valorant-match-history
