@@ -11,8 +11,11 @@ Want to install an .exe file instead? I got you covered: https://github.com/clik
 
 # Pictures
 ![alt text](https://preview.redd.it/59wk6lf5kqa61.png?width=227&format=png&auto=webp&s=4190369dc27c047667df3017552f0c60c7abe29d)
+*Login Page*
 ![alt text](https://preview.redd.it/fy89mlg7kqa61.png?width=346&format=png&auto=webp&s=c783223f836a2bb6df7eb0c6b06bd9b4f1a4017b)
+*Match History Page*
 ![alt text](https://preview.redd.it/z8e129htoqa61.png?width=375&format=png&auto=webp&s=b2e97038e5aceb486b9cf9264efecd92074bd702)
+*Overlay Mode (borderless window!)*
 # Manual
 To run this program, simply double click the "main.py" file in the installation folder. When you see the window open up, enter in your username and password and hit the login button. Then, you should see your match history, along with your internal ELO and ELO change each match. You can refresh your info after a competitive game by clicking the refresh button at the bottom of the page. 
 
