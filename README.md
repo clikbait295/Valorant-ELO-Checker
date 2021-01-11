@@ -1,6 +1,6 @@
 # Valorant ELO Checker
 Check your hidden ELO in Valorant with a desktop application! This repo is the source code for my Valorant Elo checker.
-Want to install an .exe file instead? I got you covered: https://github.com/clikbait295/Valorant-ELO-Checker-Installer
+Want to install an .exe file instead? I got you covered: https://github.com/clikbait295/Valorant-ELO-Checker/releases/tag/v1.01
 # Installation
 1. Make sure you have Python 3 and pip installed on your computer. Download it [here](https://www.python.org/downloads/) for Windows. It should be pre-installed on Macs.
 2. Clone the repo (download as a zip, use git clone, etc) If you downloaded as a zip, unzip the file.
