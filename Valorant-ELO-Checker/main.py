@@ -24,10 +24,14 @@ match_movement_hash = {
 # Gives map name
 maps_hash = {
   '/Game/Maps/Duality/Duality': 'Bind',
+  '/Game/Maps/Triad/Triad': 'Haven',
   '/Game/Maps/Bonsai/Bonsai': 'Split',
   '/Game/Maps/Ascent/Ascent': 'Ascent',
   '/Game/Maps/Port/Port': 'Icebox',
-  '/Game/Maps/Triad/Triad': 'Haven',
+  '/Game/Maps/Foxtrot/Foxtrot': 'Breeze',
+  '/Game/Maps/Canyon/Canyon': 'Fracture',
+  '/Game/Maps/Pitt/Pitt': 'Pearl',
+  '/Game/Maps/Jam/Jam': 'Lotus',
   '': 'Unknown'
 }
 
